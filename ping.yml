@@ -1,0 +1,17 @@
+
+
+# Test we can logon to 'webservers' and execute python with json lib.
+# # ansible webservers -m ping
+
+---
+
+- hosts: remote1
+  connection: ssh
+  tasks:
+  - name: This task uses ssh
+    ping:
+  - name: This task uses ssh
+    connection: paramiko
+    ping:
+
+
